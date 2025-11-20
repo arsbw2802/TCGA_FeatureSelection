@@ -1,0 +1,15 @@
+{
+  "n_samples": 801,
+  "n_features": 20531,
+  "unique_classes": [
+    "BRCA",
+    "COAD",
+    "KIRC",
+    "LUAD",
+    "PRAD"
+  ],
+  "C": 0.1,
+  "max_iter": 5000,
+  "random_state": 42,
+  "average_pairwise_jaccard": 0.729485989211906
+}
