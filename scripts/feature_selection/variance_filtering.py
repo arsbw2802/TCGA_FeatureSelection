@@ -33,12 +33,25 @@ def jaccard(a, b):
     union = len(a | b)
     return inter / union if union > 0 else 0.0
 
+rows = []
 pairwise_jaccards = []
+
 for (i, genes_i), (j, genes_j) in combinations(enumerate(selected_gene_sets), 2):
     jac = jaccard(genes_i, genes_j)
     pairwise_jaccards.append(jac)
+    rows.append({
+        'fold_1': i + 1,
+        'fold_2': j + 1,
+        'jaccard': jac
+    })
     print(f"Jaccard(Fold {i+1}, Fold {j+1}) = {jac:.3f}")
 
 mean_jaccard = np.mean(pairwise_jaccards)
 print(f"\nMean pairwise Jaccard (variance filter, k={k_genes}): {mean_jaccard:.3f}")
 
+gene_lists_df = pd.DataFrame({f"fold_{i+1}": sorted(list(genes))
+                              for i, genes in enumerate(selected_gene_sets)})
+gene_lists_df.to_csv(f"variance_top_genes_k{k_genes}.csv", index=False)
+
+jaccard_df = pd.DataFrame(rows)
+jaccard_df.to_csv(f"variance_jaccard_k{k_genes}.csv", index=False)
