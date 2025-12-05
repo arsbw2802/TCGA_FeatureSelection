@@ -23,6 +23,8 @@ We assess:
   * LUAD – Lung Adenocarcinoma
   * PRAD – Prostate Adenocarcinoma
 
+ ### Accessing the Cleaned Data
+Since our dataset is too large to include on GitHub, we've uploaded `RNAseq_with_HGNC_symbols1.csv` and `labels.csv` to [this OneDrive](https://gtvault-my.sharepoint.com/:f:/g/personal/kkeith9_gatech_edu/IgDnuPFr2umcSLkOo4-8lJKUAeRHgjN2kEnNlPKLkqmm7dc?e=y782V1) for easy access and local download.  
 ### Input Files 
 ```bash
 RNAseq_with_HGNC_symbols1.csv   # expression matrix (samples × genes)
