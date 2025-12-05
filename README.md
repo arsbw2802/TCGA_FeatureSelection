@@ -1,5 +1,5 @@
 # Assessing Algorithmic Stability in Feature Selection of Pan-Cancer Gene Expression Data Project
-Group members: Aarushi Biswas, Krisha Shetty, Kristin Keith 
+**Group members: Aarushi Biswas, Krisha Shetty, Kristin Keith** 
 
 This project evaluates the trade-off between predictive performance and selection stability for three feature selection methods applied to a TCGA pan-cancer RNA-Seq dataset:
 * Variance filtering (unsupervised)
